@@ -13,6 +13,7 @@ add_library(
   c++/Source/ctickhook.cpp
   c++/Source/cmem_pool.cpp
   c++/Source/csemaphore.cpp
+  c++/Source/ctimeout.cpp
   c++/Source/cmutex.cpp
   c++/Source/ctasklet.cpp
   c++/Source/ctimer.cpp
