@@ -149,6 +149,12 @@ class Mutex {
         SemaphoreHandle_t handle;
 
         /**
+         *  Static semaphore handle.
+         *  This is used for static allocation of the Mutex.
+         */
+        StaticSemaphore_t xMutexBuffer;
+
+        /**
          *  This constructor should not be public.
          */
         Mutex();

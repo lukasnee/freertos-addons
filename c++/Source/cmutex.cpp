@@ -56,7 +56,7 @@ Mutex::~Mutex()
 
 MutexStandard::MutexStandard()
 {
-    handle = xSemaphoreCreateMutex();
+    handle = xSemaphoreCreateMutexStatic(&xMutexBuffer);
 
     if (handle == NULL) {
 #ifndef CPP_FREERTOS_NO_EXCEPTIONS
@@ -86,7 +86,7 @@ bool MutexStandard::Unlock()
 
 MutexRecursive::MutexRecursive()
 {
-    handle = xSemaphoreCreateRecursiveMutex();
+    handle = xSemaphoreCreateRecursiveMutexStatic(&xMutexBuffer);
 
     if (handle == NULL) {
 #ifndef CPP_FREERTOS_NO_EXCEPTIONS
